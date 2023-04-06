@@ -1,0 +1,32 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT , price INTEGER, catagory Text, quantiy INTEGER);
+
+INSERT INTO store VALUES (1,"Pkmn cards", 4,"tcg",20);
+INSERT INTO store VALUES (2,"yugioh cards", 3,"tcg",15);
+InSERT INTO store VALUES (3,"mtg cards",3,"tcg",15);
+INSERT INTO store VALUES (4,"chess set",10,"board game",5);
+INSERT INTO store VALUES (5,"checkers set",8,"board game",4);
+INSERT INTO store VALUES (6,"Blood and Magic",5,"tcg",6);
+INSERT INTO store VALUES (7,"Backgammon",10,"board game",6);
+INSERT INTO store VALUES (8,"Life",8,"board game",12);
+INSERT INTO store VALUES (9,"Monopoly",9,"board game",12);
+INSERT INTO store VALUES (10,"Connect four",6,"board game",6);
+INSERT INTO store VALUES (11,"Metazoo",3,"tcg",4);
+INSERT INTO store VALUES (12,"DBS TCG",3,"tcg",7);
+INSERT INTO store VALUES (13,"battle ship",8,"board game",5);
+INSERT INTO store VALUES (14,"risk",7,"board game",4);
+INSERT INTO store VALUES (15,"chinese checkers",6,"board game",3);
+
+--display the data order by price .
+SELECT * FROM store
+ORDER BY price desc;
+
+--whar is the avg price of items in the tcg catagory?
+SELECT AVG(price) "avg tcg item price"
+FROM store 
+Where catagory='tcg';
+
+what 5 items have the most quantiy ?
+Select item,price,quantiy
+From store
+order by popularity desc
+limit 5;
